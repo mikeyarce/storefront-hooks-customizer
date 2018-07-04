@@ -1,4 +1,14 @@
 <?php
+/*
+Plugin Name: Storefront Hooks Customizer
+Plugin URI: https://themebynumbers.com
+Description: Hook into Storefront from the Customizer.
+Version: 1.0
+Author: mikeyarce
+Author URI: http://themebynumbers.com
+Text Domain: storefront-hooks-customizer
+Domain Path: /languages
+*/
 
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
