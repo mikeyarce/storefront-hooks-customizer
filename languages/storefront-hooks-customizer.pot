@@ -1,0 +1,188 @@
+# Copyright (C) {2018} {{Storefront Hooks Customizer}}
+# This file is distributed under the same license as the {{Storefront Hooks Customizer}} package.
+msgid ""
+msgstr ""
+"Project-Id-Version: {Storefront Hooks Customizer} {1.0.0}\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/{storefront-hooks-"
+"customizer}\n"
+"POT-Creation-Date: 2018-07-04 18:18:12+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: storefront-hooks-customizer.php:65
+msgid "Before Header"
+msgstr ""
+
+#: storefront-hooks-customizer.php:69
+msgid "Header"
+msgstr ""
+
+#: storefront-hooks-customizer.php:73
+msgid "Before Content"
+msgstr ""
+
+#: storefront-hooks-customizer.php:77
+msgid "Content Top"
+msgstr ""
+
+#: storefront-hooks-customizer.php:81
+msgid "Homepage"
+msgstr ""
+
+#: storefront-hooks-customizer.php:85
+msgid "Page"
+msgstr ""
+
+#: storefront-hooks-customizer.php:89
+msgid "Before Product Categories"
+msgstr ""
+
+#: storefront-hooks-customizer.php:93
+msgid "After Product Categories Title"
+msgstr ""
+
+#: storefront-hooks-customizer.php:97
+msgid "After Product Categories"
+msgstr ""
+
+#: storefront-hooks-customizer.php:101
+msgid "Before Recent Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:105
+msgid "After Recent Products Title"
+msgstr ""
+
+#: storefront-hooks-customizer.php:109
+msgid "After Recent Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:113
+msgid "Before Featured Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:117
+msgid "After Featured Products Title"
+msgstr ""
+
+#: storefront-hooks-customizer.php:121
+msgid "After Featured Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:125
+msgid "Before Popular Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:129
+msgid "After Popular Products Title"
+msgstr ""
+
+#: storefront-hooks-customizer.php:133
+msgid "After Popular Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:137
+msgid "Before On Sale Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:141
+msgid "After On Sale Products Title"
+msgstr ""
+
+#: storefront-hooks-customizer.php:145
+msgid "After On Sale Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:149
+msgid "Before Best Selling Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:153
+msgid "After Best Selling Products Title"
+msgstr ""
+
+#: storefront-hooks-customizer.php:157
+msgid "After Best Selling Products"
+msgstr ""
+
+#: storefront-hooks-customizer.php:161
+msgid "Before Footer"
+msgstr ""
+
+#: storefront-hooks-customizer.php:165
+msgid "Footer"
+msgstr ""
+
+#: storefront-hooks-customizer.php:169
+msgid "After Footer"
+msgstr ""
+
+#: storefront-hooks-customizer.php:181
+msgid "Storefront Hooks"
+msgstr ""
+
+#: storefront-hooks-customizer.php:189
+msgid "Header Hooks"
+msgstr ""
+
+#: storefront-hooks-customizer.php:190
+msgid ""
+"These hooks will let you add content into Storefront's Header section.  You "
+"will likely need CSS to move other things around to get the exact desired "
+"look."
+msgstr ""
+
+#: storefront-hooks-customizer.php:193
+msgid "Content Hooks"
+msgstr ""
+
+#: storefront-hooks-customizer.php:194
+msgid ""
+"Here you can hook into the Content section of Storefront.  Keep in mind "
+"these will show up any time the content is being displayed!  Use conditional "
+"tags if you want to display things only sometimes."
+msgstr ""
+
+#: storefront-hooks-customizer.php:197
+msgid "Homepage Template Hooks"
+msgstr ""
+
+#: storefront-hooks-customizer.php:198
+msgid ""
+"Homepage hooks are available when you are using the Homepage Template on "
+"your Front Page."
+msgstr ""
+
+#: storefront-hooks-customizer.php:201
+msgid "Footer Hooks"
+msgstr ""
+
+#: storefront-hooks-customizer.php:202
+msgid "These are the Footer hooks."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Storefront Hooks Customizer"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://themebynumbers.com/plugins"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Adds a Customizer panel that let's you easily add content to the Storefront "
+"theme's Hooks."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mikey Arce"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://themebynumbers.com"
+msgstr ""
