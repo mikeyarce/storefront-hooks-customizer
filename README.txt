@@ -7,7 +7,7 @@ Tested up to: 4.9.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Storefront Hooks Customizer gives you the ability to add content to Storefront's template hooks through the WordPress Customizer.
+Hook into Storefront from the Customizer!
 
 == Description ==
 
@@ -20,10 +20,6 @@ You will be able to add content into the Header, Content, Homepage Template, and
 Each hook is saved on a per-theme basis, so when you switch themes the options will be blank.  If you switch back, you will see the options added back.
 
 == Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
 
 1. Upload the `storefront-hooks-customizer` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
