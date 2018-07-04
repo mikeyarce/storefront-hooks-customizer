@@ -1,22 +1,4 @@
 <?php
-/**
- * 
- * @link              http://themebynumbers.com
- * @since             1.0.0
- * @package           Storefront_Hooks_Customizer
- *
- * @wordpress-plugin
- * Plugin Name:       Storefront Hooks Customizer
- * Plugin URI:        http://themebynumbers.com/plugins
- * Description:       Adds a Customizer panel that let's you easily add content to the Storefront theme's Hooks.
- * Version:           1.0.0
- * Author:            Mikey Arce
- * Author URI:        http://themebynumbers.com
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       storefront-hooks-customizer
- * Domain Path:       /languages
- */
 
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -57,135 +39,135 @@ class Storefront_Hooks_Customizer {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		add_action( 'customize_register', array($this, 'shcz_customize_register') );
-		add_action( 'after_setup_theme', array($this, 'shcz_register_storefront_hooks') );
+		add_action( 'customize_register', array( $this, 'shcz_customize_register' ) );
+		add_action( 'after_setup_theme', array( $this, 'shcz_register_storefront_hooks' ) );
 
 		$this->storefront_hooks = [
-			'storefront_before_header' => [ 
+			'storefront_before_header' => [
 				'title' => __( 'Before Header', 'storefront-hooks-customizer' ),
-				'section' => 'header_hooks'
+				'section' => 'header_hooks',
 			],
-			'storefront_header' => [ 
+			'storefront_header' => [
 				'title' => __( 'Header' , 'storefront-hooks-customizer' ),
-				'section' => 'header_hooks'
+				'section' => 'header_hooks',
 			],
-			'storefront_before_content' => [ 
+			'storefront_before_content' => [
 				'title' => __( 'Before Content', 'storefront-hooks-customizer' ),
-				'section' => 'content_hooks'
+				'section' => 'content_hooks',
 			],
-			'storefront_content_top' => [ 
+			'storefront_content_top' => [
 				'title' => __( 'Content Top', 'storefront-hooks-customizer' ),
-				'section' => 'content_hooks'
+				'section' => 'content_hooks',
 			],
-			'homepage' => [ 
+			'homepage' => [
 				'title' => __( 'Homepage', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_page' => [ 
+			'storefront_page' => [
 				'title' => __( 'Page', 'storefront-hooks-customizer' ),
-				'section' => 'content_hooks'
+				'section' => 'content_hooks',
 			],
-			'storefront_homepage_before_product_categories' => [ 
-				'title' => __( 'Before Product Categories', 'storefront-hooks-customizer'),
-				'section' => 'homepage_hooks'
+			'storefront_homepage_before_product_categories' => [
+				'title' => __( 'Before Product Categories', 'storefront-hooks-customizer' ),
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_product_categories_title' => [ 
+			'storefront_homepage_after_product_categories_title' => [
 				'title' => __( 'After Product Categories Title', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_product_categories' => [ 
+			'storefront_homepage_after_product_categories' => [
 				'title' => __( 'After Product Categories', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_before_recent_products' => [ 
+			'storefront_homepage_before_recent_products' => [
 				'title' => __( 'Before Recent Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_recent_products_title' => [ 
+			'storefront_homepage_after_recent_products_title' => [
 				'title' => __( 'After Recent Products Title', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_recent_products' => [ 
+			'storefront_homepage_after_recent_products' => [
 				'title' => __( 'After Recent Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_before_featured_products' => [ 
+			'storefront_homepage_before_featured_products' => [
 				'title' => __( 'Before Featured Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_featured_products_title' => [ 
+			'storefront_homepage_after_featured_products_title' => [
 				'title' => __( 'After Featured Products Title', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_featured_products' => [ 
+			'storefront_homepage_after_featured_products' => [
 				'title' => __( 'After Featured Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_before_popular_products' => [ 
+			'storefront_homepage_before_popular_products' => [
 				'title' => __( 'Before Popular Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_popular_products_title' => [ 
+			'storefront_homepage_after_popular_products_title' => [
 				'title' => __( 'After Popular Products Title', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_popular_products' => [ 
+			'storefront_homepage_after_popular_products' => [
 				'title' => __( 'After Popular Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_before_on_sale_products' => [ 
+			'storefront_homepage_before_on_sale_products' => [
 				'title' => __( 'Before On Sale Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_on_sale_products_title' => [ 
+			'storefront_homepage_after_on_sale_products_title' => [
 				'title' => __( 'After On Sale Products Title', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_on_sale_products' => [ 
+			'storefront_homepage_after_on_sale_products' => [
 				'title' => __( 'After On Sale Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_before_best_selling_products' => [ 
+			'storefront_homepage_before_best_selling_products' => [
 				'title' => __( 'Before Best Selling Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_best_selling_products_title' => [ 
+			'storefront_homepage_after_best_selling_products_title' => [
 				'title' => __( 'After Best Selling Products Title', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_homepage_after_best_selling_products_products' => [ 
+			'storefront_homepage_after_best_selling_products_products' => [
 				'title' => __( 'After Best Selling Products', 'storefront-hooks-customizer' ),
-				'section' => 'homepage_hooks'
+				'section' => 'homepage_hooks',
 			],
-			'storefront_before_footer' => [ 
+			'storefront_before_footer' => [
 				'title' => __( 'Before Footer', 'storefront-hooks-customizer' ),
-				'section' => 'footer_hooks'
+				'section' => 'footer_hooks',
 			],
-			'storefront_footer' => [ 
+			'storefront_footer' => [
 				'title' => __( 'Footer', 'storefront-hooks-customizer' ),
-				'section' => 'footer_hooks'
+				'section' => 'footer_hooks',
 			],
-			'storefront_after_footer' => [ 
+			'storefront_after_footer' => [
 				'title' => __( 'After Footer', 'storefront-hooks-customizer' ),
-				'section' => 'footer_hooks'
-			]
+				'section' => 'footer_hooks',
+			],
 		];
 	}
 
 	public function shcz_customize_register( $wp_customize ) {
 
-		require_once dirname(__FILE__) . '/includes/class-textarea-custom-control.php';
-		
+		require_once dirname( __FILE__ ) . '/includes/class-textarea-custom-control.php';
+
 		// Register Main Panel
 		$wp_customize->add_panel( 'storefront_hooks', array(
 			'title' => __( 'Storefront Hooks' ),
 			'description' => 'Hooks',
-			'priority' => 160
-		  ) );
+			'priority' => 160,
+		) );
 
 		// Register each Section
 		$shcz_secitons = [
-			'header_hooks' =>  [
+			'header_hooks' => [
 				'title'       => __( 'Header Hooks', 'storefront-hooks-customizer' ),
 				'description' => __( 'These hooks will let you add content into Storefront\'s Header section.  You will likely need CSS to move other things around to get the exact desired look.', 'storefront-hooks-customizer' ),
 			],
@@ -200,28 +182,26 @@ class Storefront_Hooks_Customizer {
 			'footer_hooks' => [
 				'title'       => __( 'Footer Hooks', 'storefront-hooks-customizer' ),
 				'description' => __( 'These are the Footer hooks.', 'storefront-hooks-customizer' ),
-			]
+			],
 		];
 
-		foreach ($shcz_secitons as $section => $options) {
+		foreach ( $shcz_secitons as $section => $options ) {
 			$wp_customize->add_section( $section , array(
 				'title'       => $options['title'],
 				'panel'       => 'storefront_hooks',
-				'description' => $options['description']
-				) );
-			}
+				'description' => $options['description'],
+			) );
+		}
 
-		$shcz_hooks =$this->storefront_hooks;
-		
+		$shcz_hooks = $this->storefront_hooks;
+
 		foreach ( $shcz_hooks as $hook => $option ) {
 			$wp_customize->add_setting( 'shcz_' . $hook, array(
 				'default'        => '',
 				'sanitize_callback' => 'wp_kses_post',
 			) );
-			// $wp_customize->add_control( new Text_Editor_Custom_Control( 'shcz_' . $hook, array(
 			$wp_customize->add_control( new SHCZ_TinyMCE_Custom_control( $wp_customize, 'shcz_' . $hook, array(
-			// $wp_customize->add_control( 'shcz_' . $hook, array(
-				'label'       => __( $option['title'] ),
+				'label'       => $option['title'],
 				'type'        => 'textarea',
 				'section'     => $option['section'],
 			) ) );
@@ -233,13 +213,13 @@ class Storefront_Hooks_Customizer {
 		$filters = $this->storefront_hooks;
 
 		foreach ( $filters as $filter => $options ) {
-			
-			$theme_mod = 'shcz_' . $filter;				
-			$option = get_theme_mod( $theme_mod );
 
-			if ( ! empty($option) ) {
-				add_filter( $filter, function() use ($option) {
-					echo $option;
+			$theme_mod = 'shcz_' . $filter;
+			$option    = get_theme_mod( $theme_mod );
+
+			if ( ! empty( $option ) ) {
+				add_filter( $filter, function() use ( $option ) {
+					return $option;
 				});
 			}
 		}
