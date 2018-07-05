@@ -14,10 +14,22 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 		public $type = 'tinymce_editor';
 		
-		public function enqueue(){
-            wp_enqueue_script( 'storefront-hooks-customizer-js', plugin_dir_url( dirname( __FILE__ ) ) . 'js/customizer.min.js', array( 'jquery' ), '1.0', true );
-            wp_enqueue_editor();
+		/**
+		 * Load JS resources
+		 */
+		public function enqueue() {
+			$min = WP_DEBUG ? '' : '.min';
+			$ver = WP_DEBUG ? time() : STOREFRONT_HOOKS_CUSTOMIZER;
+			wp_enqueue_script(
+				'storefront-hooks-customizer-js',
+				plugin_dir_url( dirname( __FILE__ ) ) . 'js/customizer' . $min . '.js',
+				array( 'jquery' ),
+				$ver,
+				true
+			);
+			wp_enqueue_editor();
 		}
+
 		/**
 		 * Render the control
 		 */
