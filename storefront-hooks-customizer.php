@@ -211,7 +211,6 @@ class Storefront_Hooks_Customizer {
 				'sanitize_callback' => 'wp_kses_post',
 			) );
 			$wp_customize->add_control( new SHCZ_TinyMCE_Custom_control( $wp_customize, 'shcz_' . $hook, array(
-			$wp_customize->add_control( new SHCZ_TinyMCE_Custom_Control( $wp_customize, 'shcz_' . $hook, array(
 				'label'       => $option['title'],
 				'type'        => 'textarea',
 				'section'     => $option['section'],
